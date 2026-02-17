@@ -1,0 +1,71 @@
+%PDF-1.4
+%\xe2\xe3\xcf\xd3
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3063 >>
+stream
+BT /F2 18 Tf 50 760 Td (App Summary - One Page) Tj ET
+BT /F1 9 Tf 50 742 Td (Evidence scope: README.md, index.html, galaga.html, src/galaga/*, src/snake/*) Tj ET
+BT /F2 12 Tf 50 722 Td (What it is) Tj ET
+BT /F1 10 Tf 60 708 Td (A static web app for System Academy with a Korean marketing homepage and a separate browser) Tj ET
+BT /F1 10 Tf 60 696 Td (Galaga game page.) Tj ET
+BT /F1 10 Tf 60 684 Td (The repo evidence shows client-side HTML/CSS/JS modules only; backend services are not present.) Tj ET
+BT /F2 12 Tf 50 667 Td (Who it is for) Tj ET
+BT /F1 10 Tf 60 653 Td (Primary persona: middle and high school students plus parents evaluating course offerings and) Tj ET
+BT /F1 10 Tf 60 641 Td (how to contact the academy.) Tj ET
+BT /F2 12 Tf 50 624 Td (What it does) Tj ET
+BT /F1 10 Tf 60 610 Td (- Shows academy branding, hero message, subject cards \(English, Math, Science\), operating hours,) Tj ET
+BT /F1 10 Tf 60 598 Td (  and contact methods.) Tj ET
+BT /F1 10 Tf 60 586 Td (- Uses responsive layout rules so the homepage shifts from multi-column grids to single-column on) Tj ET
+BT /F1 10 Tf 60 574 Td (  small screens.) Tj ET
+BT /F1 10 Tf 60 562 Td (- Provides a playable Galaga screen with canvas rendering and a live HUD for score, lives, level,) Tj ET
+BT /F1 10 Tf 60 550 Td (  and status.) Tj ET
+BT /F1 10 Tf 60 538 Td (- Supports keyboard and pointer controls for movement, shooting, pause/resume, and restart.) Tj ET
+BT /F1 10 Tf 60 526 Td (- Runs a real-time loop with requestAnimationFrame and dt-based state updates for smoother) Tj ET
+BT /F1 10 Tf 60 514 Td (  gameplay.) Tj ET
+BT /F1 10 Tf 60 502 Td (- Includes isolated game logic modules with Node tests covering collisions, score, boundaries,) Tj ET
+BT /F1 10 Tf 60 490 Td (  and wave progression.) Tj ET
+BT /F2 12 Tf 50 473 Td (How it works \(repo evidence only\)) Tj ET
+BT /F1 10 Tf 60 459 Td (- Entry points: index.html \(academy site\) and galaga.html \(game UI and controls\).) Tj ET
+BT /F1 10 Tf 60 447 Td (- UI/controller: src/galaga/game.mjs binds DOM input, calls step\(\), and re-renders canvas plus) Tj ET
+BT /F1 10 Tf 60 435 Td (  HUD each frame.) Tj ET
+BT /F1 10 Tf 60 423 Td (- Domain logic: src/galaga/logic.mjs and src/snake/logic.mjs implement pure state transitions.) Tj ET
+BT /F1 10 Tf 60 411 Td (- Validation: src/galaga/logic.test.mjs and src/snake/logic.test.mjs run with node:test.) Tj ET
+BT /F1 10 Tf 60 399 Td (- Data flow: user input -> input flags -> step\(state, input\) -> next state -> canvas and DOM) Tj ET
+BT /F1 10 Tf 60 387 Td (  render.) Tj ET
+BT /F1 10 Tf 60 375 Td (- Backend API, database, auth, deployment pipeline: Not found in repo.) Tj ET
+BT /F1 10 Tf 60 363 Td (- Snake page route/launcher HTML that uses src/snake/game.mjs: Not found in repo.) Tj ET
+BT /F2 12 Tf 50 346 Td (How to run \(minimal\)) Tj ET
+BT /F1 10 Tf 60 332 Td (- From repo root: python3 -m http.server 4173) Tj ET
+BT /F1 10 Tf 60 320 Td (- Open homepage: http://localhost:4173/index.html) Tj ET
+BT /F1 10 Tf 60 308 Td (- Open game page: http://localhost:4173/galaga.html) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000027 00000 n 
+0000000076 00000 n 
+0000000133 00000 n 
+0000000269 00000 n 
+0000000339 00000 n 
+0000000414 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3529
+%%EOF

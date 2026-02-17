@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaga</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #222222;
+      }
+
+      .app {
+        max-width: 520px;
+        margin: 24px auto;
+        padding: 0 16px;
+      }
+
+      .panel {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+        margin-bottom: 12px;
+        font-size: 14px;
+      }
+
+      .panel strong {
+        display: block;
+      }
+
+      canvas {
+        width: 100%;
+        display: block;
+        border: 1px solid #cccccc;
+        background: #0f1014;
+        touch-action: none;
+      }
+
+      .actions,
+      .controls {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      button {
+        border: 1px solid #cccccc;
+        background: #f8f8f8;
+        color: #222222;
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .controls button {
+        flex: 1;
+      }
+
+      .hint {
+        margin-top: 12px;
+        font-size: 13px;
+        color: #444444;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <div class="panel">
+        <div>Score<strong data-score>0</strong></div>
+        <div>Lives<strong data-lives>3</strong></div>
+        <div>Level<strong data-level>1</strong></div>
+        <div>Status<strong data-status>Running</strong></div>
+      </div>
+
+      <canvas data-galaga-board></canvas>
+
+      <div class="actions">
+        <button type="button" data-pause>Pause</button>
+        <button type="button" data-restart>Restart</button>
+      </div>
+
+      <div class="controls" aria-label="mobile controls">
+        <button type="button" data-control="left">Left</button>
+        <button type="button" data-control="shoot">Shoot</button>
+        <button type="button" data-control="right">Right</button>
+      </div>
+
+      <p class="hint">Keyboard: Left/Right or A/D, Shoot: Space, Pause: P, Restart: R</p>
+    </main>
+
+    <script type="module" src="./src/galaga/game.mjs"></script>
+  </body>
+</html>

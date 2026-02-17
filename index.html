@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시스템학원 | 영어·수학·과학 전문</title>
+    <style>
+      :root {
+        --bg: #f3f6fb;
+        --surface: #ffffff;
+        --text: #1f2937;
+        --muted: #5b6472;
+        --primary: #0f4c81;
+        --primary-soft: #e9f2fb;
+        --line: #d9e0ea;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+        background: linear-gradient(180deg, #eef4fb 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .topbar {
+        border-bottom: 1px solid var(--line);
+        background: #ffffffcc;
+        backdrop-filter: blur(4px);
+      }
+
+      .topbar-inner {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .hero {
+        margin-top: 28px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 28px;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-size: 34px;
+        line-height: 1.25;
+      }
+
+      .hero p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .hero-actions {
+        margin-top: 18px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .btn.primary {
+        border-color: var(--primary);
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .section {
+        margin-top: 18px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px;
+      }
+
+      .section h2 {
+        margin: 0 0 14px;
+        font-size: 24px;
+      }
+
+      .subjects {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .subject {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--primary-soft);
+        padding: 14px;
+      }
+
+      .subject strong {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+
+      .subject span {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .info-item {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px;
+      }
+
+      .info-item strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      footer {
+        margin: 22px 0 30px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+
+      @media (max-width: 720px) {
+        .hero h1 {
+          font-size: 28px;
+        }
+
+        .subjects,
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">시스템학원</div>
+        <div>영어 · 수학 · 과학</div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>기초부터 실전까지, 성적을 만드는 공부 습관</h1>
+        <p>시스템학원은 영어, 수학, 과학을 체계적으로 지도하는 초·중·고 전문 학원입니다.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">상담 신청</a>
+          <a class="btn" href="#subjects">과목 안내</a>
+        </div>
+      </section>
+
+      <section class="section" id="subjects">
+        <h2>핵심 과목</h2>
+        <div class="subjects">
+          <article class="subject">
+            <strong>영어</strong>
+            <span>문법, 독해, 내신 대비와 수능 유형 훈련</span>
+          </article>
+          <article class="subject">
+            <strong>수학</strong>
+            <span>개념 완성, 유형 반복, 오답 관리 중심 수업</span>
+          </article>
+          <article class="subject">
+            <strong>과학</strong>
+            <span>핵심 개념 정리와 문제 해결력 강화</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>상담 및 안내</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <strong>운영 시간</strong>
+            <div>평일 14:00 - 22:00</div>
+            <div>토요일 10:00 - 18:00</div>
+          </div>
+          <div class="info-item">
+            <strong>문의 방법</strong>
+            <div>전화: 010-1234-5678</div>
+            <div>카카오톡: 시스템학원</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 시스템학원. 영어 · 수학 · 과학 전문.
+    </footer>
+  </body>
+</html>

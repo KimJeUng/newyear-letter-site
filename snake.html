@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #222222;
+      }
+
+      .app {
+        max-width: 520px;
+        margin: 24px auto;
+        padding: 0 16px;
+      }
+
+      .panel {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-bottom: 12px;
+        font-size: 14px;
+      }
+
+      .panel strong {
+        display: block;
+      }
+
+      canvas {
+        width: 100%;
+        display: block;
+        border: 1px solid #cccccc;
+        background: #f2f2f2;
+      }
+
+      .actions,
+      .controls {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .controls button {
+        flex: 1;
+      }
+
+      button {
+        border: 1px solid #cccccc;
+        background: #f8f8f8;
+        color: #222222;
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .hint {
+        margin-top: 12px;
+        font-size: 13px;
+        color: #444444;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <div class="panel">
+        <div>Score<strong data-score>0</strong></div>
+        <div>Status<strong data-status>Running</strong></div>
+      </div>
+
+      <canvas data-board></canvas>
+
+      <div class="actions">
+        <button type="button" data-pause>Pause</button>
+        <button type="button" data-restart>Restart</button>
+      </div>
+
+      <div class="controls" aria-label="mobile controls">
+        <button type="button" data-dir="UP">Up</button>
+        <button type="button" data-dir="LEFT">Left</button>
+        <button type="button" data-dir="DOWN">Down</button>
+        <button type="button" data-dir="RIGHT">Right</button>
+      </div>
+
+      <p class="hint">Keyboard: Arrow keys or W/A/S/D, Pause: Space/P, Restart: R</p>
+    </main>
+
+    <script type="module" src="./src/snake/game.mjs"></script>
+  </body>
+</html>
